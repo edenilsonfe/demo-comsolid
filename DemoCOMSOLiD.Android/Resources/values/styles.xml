@@ -23,6 +23,9 @@
             name="colorPrimaryDark">#1976D2</item>
         <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
+        
+        <item name="android:colorActivatedHighlight">#2ca5b7</item>
+        
         <item
             name="colorAccent">#FF4081</item>
         <!-- You can also set colorControlNormal, colorControlActivated

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DemoCOMSOLiD.Components.ChatView"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <ContentView.Content>
+        
+        <StackLayout Orientation="Horizontal">
+            <ffimageloading:CachedImage 
+                x:Name="photoUser"
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="70" HeightRequest="70"
+                DownsampleToViewSize="true"
+                Margin="10">
+                
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:CircleTransformation />
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+            
+            <StackLayout Margin="10" Orientation="Horizontal">
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="txtTitle" TextColor="Maroon"/>
+                    <Label x:Name="txtDescription" TextColor="Teal"/>
+                </StackLayout>
+                
+               <Label Text="10" VerticalOptions="End" HorizontalOptions="End" Margin="0,0,0,5" />
+            </StackLayout>
+            
+        </StackLayout>
+        
+    </ContentView.Content>
+</ContentView>

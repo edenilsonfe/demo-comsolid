@@ -11,7 +11,7 @@ namespace DemoCOMSOLiD
         {
             InitializeComponent();
 
-            MainPage = new Views.HomePage();
+            MainPage = new Views.MainPage();
         }
 
         protected override void OnStart()
