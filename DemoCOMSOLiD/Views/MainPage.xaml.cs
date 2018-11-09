@@ -10,6 +10,7 @@ namespace DemoCOMSOLiD.Views
         public MainPage()
         {
             InitializeComponent();
+            CurrentPage = Children[1];
         }
     }
 }

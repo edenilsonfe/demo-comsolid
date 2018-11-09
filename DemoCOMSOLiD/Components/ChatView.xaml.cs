@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using Badge.Plugin;
 using DemoCOMSOLiD.Models;
 using Xamarin.Forms;
 

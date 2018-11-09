@@ -8,18 +8,19 @@ namespace DemoCOMSOLiD.Views
 {
     public partial class ChatsPage : ContentPage
     {
-        readonly ChatPageViewModel _vm;
+        readonly ChatsPageViewModel _vm;
         public ChatsPage()
         {
             InitializeComponent();
-            this.BindingContext = _vm = new ChatPageViewModel();
+            this.BindingContext = _vm = new ChatsPageViewModel();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        public void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var item = e.SelectedItem as ChatModel;
+            var item = e.Item as ChatModel;
 
-            DisplayAlert("", item.Name, "Ok");
+            Navigation.PushAsync(new SingleChatPage(item));
         }
     }
 }

@@ -6,11 +6,11 @@
     x:Class="DemoCOMSOLiD.Views.ChatsPage">
     <ContentPage.Content>
         
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <ListView 
             ItemsSource="{Binding Chats, Mode = TwoWay}"
             HasUnevenRows="true"
-            ItemSelected="Handle_ItemSelected">
+            ItemTapped="Handle_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

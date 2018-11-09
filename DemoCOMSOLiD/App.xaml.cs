@@ -11,7 +11,7 @@ namespace DemoCOMSOLiD
         {
             InitializeComponent();
 
-            MainPage = new Views.MainPage();
+            MainPage = new NavigationPage(new Views.MainPage()) { BarBackgroundColor = Color.FromHex("#075e54") };
         }
 
         protected override void OnStart()

@@ -1,8 +1,42 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:hntx="clr-namespace:DemoCOMSOLiD.Components"
     x:Class="DemoCOMSOLiD.Views.StatusPage">
     <ContentPage.Content>
+        
+        
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Getting Started">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="ic_more" />
+                            <Label Text="left"
+                              TextColor="#f35e20" />
+                            <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+            <!--<ListView 
+                ItemsSource="{Binding Chats, Mode = TwoWay}"
+                HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <hntx:ChatView Chat="{Binding .}"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+    </StackLayout>
     </ContentPage.Content>
 </ContentPage>

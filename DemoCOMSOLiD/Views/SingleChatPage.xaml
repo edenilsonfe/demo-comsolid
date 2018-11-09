@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:hnts="clr-namespace:DemoCOMSOLiD.Components"
+    x:Class="DemoCOMSOLiD.Views.SingleChatPage">
+    
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Image WidthRequest="30" BackgroundColor="Gray" />
+            <StackLayout Margin="20,0">
+                <Label Text="Username" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                <Label Text="Number" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout> 
+    </NavigationPage.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Config" Icon="ic_more" Order="Primary" Priority="0"/>
+    </ContentPage.ToolbarItems>
+        
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Chats}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <hnts:UserMessageView Chat="{Binding .}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        
+        <!--    Entry Message    -->
+        <StackLayout Orientation="Horizontal" HeightRequest="40" Margin="5,0">
+            <Image HeightRequest="20" WidthRequest="20" BackgroundColor="Gray"/>
+            <Entry Placeholder="Type a message" HorizontalOptions="FillAndExpand"/>
+            <Image HeightRequest="20" WidthRequest="20" BackgroundColor="Gray"/>
+        </StackLayout>
+    </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
